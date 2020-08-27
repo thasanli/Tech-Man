@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap"
+    rel="stylesheet"
+  />
+    <title>sign in | hire_&_man</title>
+    {% load static %}
+    <link rel="stylesheet" href='{% static "css/sign_in_jobSeeker.css" %}' />
+</head>
+<body>
+    <div class="header">
+        <div class="logoDiv">
+          <img src="../static/img/logo_.png" alt="Tech_man_logo" />
+          <span class="logoSpan">tech & man</span>
+          <a href="/tech_&_man"> </a>
+  
+        </div>
+        <div class="menu">
+          <div class="menu1div">
+            <a href="/tech_&_man/sign_in_employer"> post a job</a>
+            <a href="/tech_&_man/find_job">find job</a>
+          </div>
+          <div class="menu2div">
+            <a href="/tech_&_man/sign_up_jobSeeker">sing up</a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="logInContainer">
+
+            <p>sign in</p>
+            <div class = 'emloyerJobSeekerBtnDiv'>
+              <a href="sign_in_employer" id='employerBtn'>Employer</a>
+              <a href="sign_in_jobSeeker" id='jobSeekerBtn'> Job Seeker</a>
+            </div> 
+            <form class="signInForm" action="registration">
+              {% csrf_token %}
+              <input name='' type="text" placeholder="email address"/>
+              <input name='' type="text" placeholder="password"/>
+              <button type="submit">log in</button>
+            </form>
+            <p id='noAccountP'> Don't have an account? <a href="/tech_&_man/sign_up_jobSeeker">Sign up</a> now.</p>
+  
+        </div>
+</body>
+</html>

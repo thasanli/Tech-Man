@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap" rel="stylesheet">
+    <title>Dashboard JobSeeker</title>
+    {% load static %}
+    <link rel="stylesheet" href='{% static "css/find_job.css" %}' />
+</head>
+<body>
+    <div class="header">
+        <div class="logoDiv">
+          <img src="../static/img/logo_.png" alt="Tech_man_logo"/>
+          <span class="logoSpan">tech & man</span>
+        </div>
+        <div class="menu">
+          <div class="menu1div">
+            <a href="/tech_&_man/find_job">find job</a>
+          </div>
+          <div class="menu2div">
+              <span> Hello {{request.session.first_name }}</span>
+
+          </div>
+        </div>
+      </div>
+    
+</body>
+</html>

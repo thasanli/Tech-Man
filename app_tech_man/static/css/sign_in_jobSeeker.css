@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poiret One', cursive;
+    background-color: #F2F6F5;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: white;
+}
+
+.header *{
+    background-color: white;
+    
+}
+img{
+    margin-left: 40px;
+    width: 50px;
+}
+
+.logoDiv{
+    display: flex;
+    align-items: center;
+    min-width: 280px;
+    max-width: 280px;
+    padding: 5px;
+
+}
+.logoDiv span{
+    margin-left: 15px;
+    font-size: 35px;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 900px;
+}
+
+@media only screen and (min-width: 1300px){
+    .menu{
+        min-width: 1600px
+    }
+}
+
+
+.menu a{
+    all: unset;
+    display: inline-block;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 50px;
+    text-align: center;
+    border: 1px solid #CC1CD1;
+    font-weight: bolder;
+    margin-left: 20px;
+}
+
+.menu1div a{
+    width: 120px;
+
+}
+.menu2div a{
+    width: 80px;
+}
+
+.menu a:hover{
+    cursor: pointer;
+    background-color: rgb(79, 76, 247);
+    color: white;
+    border: 1px solid rgb(79, 76, 247);
+}
+
+
+
+.logInContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 20px;
+    box-shadow: 1px 1px 5px 5px rgb(202, 206, 205);
+
+}
+
+.logInContainer p{
+    font-size: 50px;
+}
+
+
+.signInForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.signInForm button{
+    border: none;
+    min-width: 200px;
+    min-height: 55px;
+    padding: 10px; 
+    font-size: 17px;
+    border-radius: 50px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    color: white;
+    background-color: rgb(79, 76, 247);
+    font-weight: bolder;
+    outline: none;
+}
+
+.signInForm button:hover{
+    cursor: pointer;
+    background-color: rgb(54, 51, 243);
+}
+
+.signInForm input{
+    margin: 5px;
+    min-height: 45px;
+    min-width: 450px;
+    font-size: 20px;
+    padding-left: 5px;
+    border: 1px solid black;
+}
+
+
+#noAccountP{
+    font-size: 15px;
+    margin-bottom: 14px;
+    font-family: monospace;
+}
+
+#noAccountP a{
+    all: unset;
+}
+#noAccountP a:hover{
+    cursor: pointer;
+
+}
+
+#jobSeekerBtn{
+    all: unset;
+    font-size: 17px;
+    color: white;
+    background-color: rgb(79, 76, 247);
+    font-weight: bolder;
+    min-width: 150px;
+    padding: 5px 50px 5px 50px;
+    margin: 25px;
+
+}
+
+#jobSeekerBtn:hover{
+    cursor: pointer;
+    background-color: rgb(54, 51, 243);
+}
+
+#employerBtn{
+    all: unset;
+    font-size: 17px;
+    font-weight: bolder;
+    min-width: 150px;
+    padding: 5px 50px 5px 50px;
+    margin: 25px;
+    color: black;
+    border: 1px solid black;
+}
+
+#employerBtn:hover{
+    cursor: pointer;
+    background-color: rgb(54, 51, 243);
+
+}
+.emloyerJobSeekerBtnDiv{
+    margin-top: 15px;
+}

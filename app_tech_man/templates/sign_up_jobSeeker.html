@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap"
+      rel="stylesheet"
+    />
+    <title>sign up | hire_&_man</title>
+    {% load static %}
+    <link rel="stylesheet" href='{% static "css/sign_up_jobSeeker.css" %}' />
+  </head>
+  <body>
+    <div class="header">
+      <div class="logoDiv">
+        <img src="../static/img/logo_.png" alt="Tech_man_logo" />
+        <span class="logoSpan">tech & man</span>
+      </div>
+      <div class="menu">
+        <div class="menu1div">
+          <a href="/tech_&_man/sign_in_employer"> post a job</a>
+          <a href="/tech_&_man/find_job">find job</a>
+        </div>
+        <div class="menu2div">
+          <a href="/tech_&_man/sign_in_jobSeeker">sign in</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="registrationContainer">
+      <form
+        class="registrationForm_jobSeeker"
+        action="jobSeeker_registration"
+        method="POST"
+      >
+        {% csrf_token %}
+        <p>sign up</p>
+        <div class="emloyerJobSeekerBtnDiv">
+          <a href="sign_up_employer" id="employerBtn">Employer</a>
+          <a href="sign_up_jobSeeker" id="jobSeekerBtn"> Job Seeker </a>
+        </div>
+        <input name="firstName" type="text" placeholder="first name" />
+        <input name="lastName" type="text" placeholder="last name" />
+        <input name="email" type="text" placeholder="email address" />
+        <input name="password" type="text" placeholder="password" />
+        <input
+          name="passwordConfirm"
+          type="text"
+          placeholder="confrim password"
+        />
+        <button type="submit">sign up</button>
+      </form>
+    </div>
+  </body>
+</html>

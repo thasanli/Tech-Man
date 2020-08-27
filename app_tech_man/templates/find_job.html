@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap" rel="stylesheet">
+    <title>find a job | hire_&_man</title>
+    {% load static %}
+    <link rel="stylesheet" href='{% static "css/find_job.css" %}' />
+  </head>
+  <body>
+
+    <div class="header">
+        <div class="logoDiv">
+          <img src="../static/img/logo_.png" alt="Tech_man_logo"/>
+          <span class="logoSpan">tech & man</span>
+        </div>
+        <div class="menu">
+          <div class="menu1div">
+            <a href="/tech_&_man/sign_in_employer"> post a job</a>
+            <a href="/tech_&_man/find_job">find job</a>
+          </div>
+          <div class="menu2div">
+            <a href="/tech_&_man/sign_in_jobSeeker">sign in</a>
+            <a href="/tech_&_man/sign_up_jobSeeker">sing up</a>
+          </div>
+        </div>
+      </div>
+      <div class="jobSearchDiv">
+        <form class="jobSearchForm" action="search_job" method="POST">
+          {% csrf_token %}
+          <input
+            name="job_title"
+            type="text"
+            placeholder="job title or keyword"
+          />
+          <input name="location" type="text" placeholder="New York, NY" />
+          <button type="submit">search jobs</button>
+        </form>
+      </div>
+      <div class="filterDiv">
+          <form name='filterForm' action="filter">
+              {% csrf_token %}
+              <select name="date_posted" id="" type="submit" onchange="this.form.submit();">
+                <option value="">Date Posted</option>
+                  <option value="24hours" type="submit">Last 24 hours</option>
+                  <option value="3days">Last 3 days</option>
+                  <option value="7days">Last 7 days</option>
+                  <option value="14days">Last 14 days</option>
+              </select>
+              <select name="salary" id="">
+                  <option value="salary">Salary</option>
+              </select>
+              <select name="job_type" onchange="this.form.submit();">
+                  <option value="job_type">Job Type</option>
+                  <option value="remote">Remote</option>
+                  <option value="full_time">Full-time</option>
+                  <option value="part_time">Part-time</option>
+                  <option value="contract">Contract</option>
+                  <option value="temporary">Temporary</option>
+                  <option value="internship">Internship</option>
+                  <option value="comission">Comission</option>
+              </select>
+              <select name="company" onchange="this.form.submit();">
+                <option value="">Company</option>
+                  <option value="24hours" type="submit">Google</option>
+                  <option value="3days">Amazon</option>
+                  <option value="7days">TuralTech</option>
+                  <option value="14days">.NET</option>
+              </select>
+              <select name="experience_level" onchange="this.form.submit();">
+                <option value="experiance_level">Experience Level</option>
+                  <option value="24hours" type="submit">Entry Level</option>
+                  <option value="3days">Mid Level</option>
+                  <option value="7days">Senior Level</option>
+              </select>
+          </form>
+      </div>
+      <div class="jobSearchResultDiv">
+          <a href="">Job Title goes here</a>
+          <p>Company name, and Locatin goes here</p>
+
+          <p class="salaryP">60,000 - 80,000</p>
+          <p class="requarementsP"> Requarements</p>
+          <span> Database Administrator</span>
+
+      </div>
+
+  </body>
+</html>
